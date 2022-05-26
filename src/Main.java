@@ -45,8 +45,6 @@ public class Main {
                         System.out.println("Menggunakan skill heal");
                         ((Healer)character).heal();
                     }
-                    System.out.println("Enemy's HP : " + enemy.getHP());
-                    System.out.println(playerName + "'s HP : " + character.getHP());
                     // Aksi saling attack
                     if (character.attack()) {
                         enemy.receiveDamage(character.getAttack());
@@ -54,6 +52,8 @@ public class Main {
                     if (enemy.attack()) {
                         character.receiveDamage(enemy.getAttack());
                     }
+                    System.out.println("Enemy's HP : " + enemy.getHP());
+                    System.out.println(playerName + "'s HP : " + character.getHP());
                     System.out.println("=========================");
                     turn++;
                 }
